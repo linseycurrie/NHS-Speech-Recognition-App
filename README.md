@@ -1,3 +1,21 @@
+# NHS Health App Brief
+
+## CodeClan Dream Team - NHS Health App with Speech Recognition
+
+### MVP
+* Use NHS API
+* Users should be able to search for common health questions
+* Use Speech Recognition for searching API results
+* Database for storing favourite articles and personal details
+
+### Extensions
+* Add Reminders section for GP appointments etc.
+* Add Speech Synthesis for reading out search results
+* Integrate additional APIs - e.g. NHS Services
+* Integrate Maps for displaying local GPs, Pharmacies etc.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
