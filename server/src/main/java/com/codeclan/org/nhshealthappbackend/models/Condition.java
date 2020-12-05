@@ -1,21 +1,41 @@
 package com.codeclan.org.nhshealthappbackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "conditions")
 public class Condition {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "condition_name")
     private String conditionName;
-    private String conditionType;
-    private String dateDiagnosed;
-    private List<String> medication;
+//    @Column(name = "condition_type")
+//    private String conditionType;
+//    @Column(name = "date_diagnosed")
+//    private String dateDiagnosed;
 
-    public Condition(String conditionName, String conditionType, String dateDiagnosed, List<String> medication) {
+    @JsonIgnoreProperties(value = "favourites")
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "users_conditions",
+            joinColumns = {@JoinColumn(name = "condition_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)}
+    )
+    private List<User> users;
+
+    public Condition(String conditionName) {
         this.conditionName = conditionName;
-        this.conditionType = conditionType;
-        this.dateDiagnosed = dateDiagnosed;
-        this.medication = new ArrayList<String>();
+//        this.conditionType = conditionType;
+//        this.dateDiagnosed = dateDiagnosed;
+        this.users = new ArrayList<>();
     }
 
     public Condition() {}
@@ -36,27 +56,20 @@ public class Condition {
         this.conditionName = conditionName;
     }
 
-    public String getConditionType() {
-        return conditionType;
-    }
+//    public String getConditionType() {
+//        return conditionType;
+//    }
+//
+//    public void setConditionType(String conditionType) {
+//        this.conditionType = conditionType;
+//    }
+//
+//    public String getDateDiagnosed() {
+//        return dateDiagnosed;
+//    }
+//
+//    public void setDateDiagnosed(String dateDiagnosed) {
+//        this.dateDiagnosed = dateDiagnosed;
+//    }
 
-    public void setConditionType(String conditionType) {
-        this.conditionType = conditionType;
-    }
-
-    public String getDateDiagnosed() {
-        return dateDiagnosed;
-    }
-
-    public void setDateDiagnosed(String dateDiagnosed) {
-        this.dateDiagnosed = dateDiagnosed;
-    }
-
-    public List<String> getMedication() {
-        return medication;
-    }
-
-    public void setMedication(List<String> medication) {
-        this.medication = medication;
-    }
 }

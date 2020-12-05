@@ -1,17 +1,55 @@
 package com.codeclan.org.nhshealthappbackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "age")
     private int age;
 
+    @JsonIgnoreProperties(value = "users")
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "users_favourites",
+            joinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "favourite_id", nullable = false, updatable = false)}
+    )
     private List<Favourite> favourites;
+
+    @JsonIgnoreProperties(value = "users")
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "users_conditions",
+            joinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "condition_id", nullable = false, updatable = false)}
+    )
     private List<Condition> conditions;
+
+//    @JsonIgnoreProperties({"users"})
+//    @OneToMany
+//    @JoinColumn(name = "favourite_id", nullable = false)
+
+
+//    @JsonIgnoreProperties({"users"})
+//    @OneToMany
+//    @JoinColumn(name = "condition_id", nullable = false)
+
 
     public User(String firstName, String lastName, int age) {
         this.firstName = firstName;
@@ -63,11 +101,19 @@ public class User {
         this.favourites = favourites;
     }
 
+    public void addFavourite(Favourite favourite){
+        this.favourites.add(favourite);
+    }
+
     public List<Condition> getConditions() {
         return conditions;
     }
 
     public void setConditions(List<Condition> conditions) {
         this.conditions = conditions;
+    }
+
+    public void addCondition(Condition condition){
+        this.conditions.add(condition);
     }
 }
