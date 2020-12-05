@@ -6,9 +6,7 @@ const SearchBarComponent = () => {
     const [searchTerm, setSearchTerm] = useState("")
 
     const handleSpeechInput = function(input){
-        // const speechInput = event.target.value;
         setSearchTerm(input.transcript)
-
     }
 
     return(

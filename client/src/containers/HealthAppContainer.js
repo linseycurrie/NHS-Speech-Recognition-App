@@ -20,6 +20,12 @@ const HealthAppContainer = () => {
         requestAll()
     }, [])
 
+    const handlePost = function(user){
+        const request = new Request();
+        request.post("/users", user)
+        .then(() => window.location = "/")
+    }
+
     return(
         <>
             <p>Container</p>
@@ -29,7 +35,7 @@ const HealthAppContainer = () => {
             <SearchBarComponent></SearchBarComponent>
             <InformationListComponent></InformationListComponent>
             <InformationDetailComponent></InformationDetailComponent>
-            <UserFormComponent></UserFormComponent>
+            <UserFormComponent onCreate={handlePost}></UserFormComponent>
 
 
         </>
