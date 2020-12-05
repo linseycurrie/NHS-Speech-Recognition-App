@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface FavouriteRepository extends JpaRepository<Favourite, Long> {
-    List<Favourite> findFavouriteByUsersCondition(Condition condition);
+//    List<Favourite> findFavouriteByUsersCondition(Condition condition);
 }
