@@ -22,7 +22,7 @@ const HealthAppContainer = () => {
 
     const handlePost = function(user){
         const request = new Request();
-        request.post("/users", user)
+        request.post("/api/", user)
         .then(() => window.location = "/")
     }
 

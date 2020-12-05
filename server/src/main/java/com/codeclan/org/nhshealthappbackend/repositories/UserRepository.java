@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    List<User> findUsersByAgeGreaterThan(int age);
-    List<User> findDistinctUsersByFirstNameOrLastName(String firstName, String lastName);
-    List<User> findUsersByFavouritesId(Long id);       // (traversing)
+//    List<User> findUsersByAgeGreaterThan(int age);
+//    List<User> findDistinctUsersByFirstNameOrLastName(String firstName, String lastName);
+//    List<User> findUsersByFavouritesId(Long id);       // (traversing)
 }

@@ -29,12 +29,13 @@ const UserFormComponent = ({onCreate}) => {
             <p>UserForm</p>
             <form onSubmit={handleSubmit}>
                 <div className="form-userDetails">
-                    <label for="firstName">First Name:</label>
-                    <input text="text" id="firstName" name="firstName" onChange={handleChange}></input>
-                    <label for="lastName">Last Name:</label>
-                    <input text="text" id="lastName" name="lastName" onChange={handleChange}></input>
-                    <label for="age">Age:</label>
-                    <input text="number" id="age" name="age" onChange={handleChange}></input>
+                    <label htmlFor="firstName">First Name:</label><br />
+                    <input text="text" id="firstName" name="firstName" onChange={handleChange}></input><br />
+                    <label htmlFor="lastName">Last Name:</label><br />
+                    <input text="text" id="lastName" name="lastName" onChange={handleChange}></input><br />
+                    <label htmlFor="age">Age:</label><br />
+                    <input text="number" id="age" name="age" onChange={handleChange}></input><br />
+                    <button type="submit">Submit</button>
                 </div>
                 {/* <div className="form-conditionDetails">
                     <label for="conditionName">Condition Name:</label>
