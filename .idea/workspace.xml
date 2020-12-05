@@ -3,6 +3,24 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a6108494-d43d-4d5b-a4f5-85fa037742fb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +105,22 @@
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="-1132" y="239" key="#com.intellij.ide.util.MemberChooser/-1920.25.1920.1055/0.25.1440.805@-1920.25.1920.1055" timestamp="1607096465595" />
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1607101325849">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/0.25.1440.805@0.25.1440.805" timestamp="1607101325849" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1607101325848">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.center/-1920.25.1920.1055/0.25.1440.805@0.25.1440.805" timestamp="1607101325848" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1607101325848">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.left/-1920.25.1920.1055/0.25.1440.805@0.25.1440.805" timestamp="1607101325848" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1607101325849">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.right/-1920.25.1920.1055/0.25.1440.805@0.25.1440.805" timestamp="1607101325849" />
     <state x="229" y="63" key="SettingsEditor" timestamp="1607089045367">
       <screen x="0" y="25" width="1440" height="805" />
     </state>
