@@ -8,6 +8,7 @@ import Request from '../helpers/request'
 const HealthAppContainer = () => {
 
     const [condition, setCondition] = useState({});
+    const [searchResult, setSearchResult] = useState();
 
     const requestAll = function(){
         const request = new Request();
@@ -26,14 +27,20 @@ const HealthAppContainer = () => {
         .then(() => window.location = "/")
     }
 
+    const handleSearchRequest = function(searchTerm) {
+        const request = new Request();
+        const searchRequest = request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
+        .then((data) => {setSearchResult(data)})
+    }
+
     return(
         <>
             <p>Container</p>
             
             
         
-            <SpeechComponent />
-            <InformationListComponent />
+            <SpeechComponent onSearch={handleSearchRequest}/>
+            <InformationListComponent searchResult={searchResult} />
             <InformationDetailComponent />
             <UserFormComponent onCreate={handlePost} />
         </>

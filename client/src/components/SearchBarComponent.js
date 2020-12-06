@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const SearchBarComponent = ({transcript}) => {
+const SearchBarComponent = ({onSearch, transcript}) => {
 
     const [searchTerm, setSearchTerm] = useState("")
 
@@ -14,10 +14,9 @@ const SearchBarComponent = ({transcript}) => {
         setSearchTerm(typedInput)
     }
 
-    const handleSubmit = function() {
-        return(
-            <p>This is the handleSubmit function return</p>
-        )
+    const handleSubmit = function(event) {
+        event.preventDefault();
+        onSearch(searchTerm) ;
     }
 
     return(
