@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import InformationListComponent from '../components/InformationListComponent';
-import SearchBarComponent from '../components/SearchBarComponent';
+import SpeechComponent from '../components/SpeechComponent';
 import UserFormComponent from '../components/UserFormComponent';
 import Request from '../helpers/request'
 
 const HealthAppContainer = () => {
 
     const [condition, setCondition] = useState({});
+    const [searchResult, setSearchResult] = useState([]);
 
     const requestAll = function(){
         const request = new Request();
@@ -26,18 +27,23 @@ const HealthAppContainer = () => {
         .then(() => window.location = "/")
     }
 
+    const handleSearchRequest = function(searchTerm) {
+        const request = new Request();
+        const searchRequest = request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
+        .then((data) => {setSearchResult(data)})
+
+    }
+
     return(
         <>
             <p>Container</p>
             
             
         
-            <SearchBarComponent></SearchBarComponent>
-            <InformationListComponent></InformationListComponent>
-            <InformationDetailComponent></InformationDetailComponent>
-            <UserFormComponent onCreate={handlePost}></UserFormComponent>
-
-
+            <SpeechComponent onSearch={handleSearchRequest}/>
+            <InformationListComponent />
+            <InformationDetailComponent searchResult={searchResult} />
+            <UserFormComponent onCreate={handlePost} />
         </>
     )
 }

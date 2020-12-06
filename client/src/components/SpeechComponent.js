@@ -1,26 +1,21 @@
 import React from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import SearchBarComponent from './SearchBarComponent';
 
-const SpeechComponent = ({onSpeech}) => {
+const SpeechComponent = ({onSearch}) => {
 
     const { transcript, resetTranscript } = useSpeechRecognition()
 
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
         return null
-    } 
-
-    const onStop = () => {
-        console.log("onStop is being run");
-        SpeechRecognition.stopListening()
-        onSpeech({transcript})
     }
     
     return(
         <>
+            <SearchBarComponent onSearch={onSearch} transcript={transcript}/>
             <button onClick={SpeechRecognition.startListening}>Start</button>
-            <button onClick={onStop}>Stop</button>
+            <button onClick={SpeechRecognition.stopListening}>Stop</button>
             <button onClick={resetTranscript}>Reset</button>
-            <p>You said: {transcript}</p>
         </>
     )
 }
