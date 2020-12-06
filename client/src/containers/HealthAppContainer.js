@@ -11,7 +11,7 @@ const HealthAppContainer = () => {
 
     const requestAll = function(){
         const request = new Request();
-        const conditionRequest = request.get("https://api.nhs.uk/conditions/")
+        const conditionRequest = request.get("https://api.nhs.uk/conditions/?category=b&synonyms=false&childArticles=false")
         .then((data) => {setCondition(data)})
        
     }
