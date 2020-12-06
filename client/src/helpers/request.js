@@ -3,7 +3,7 @@ class Request {
     get(url) {
       return fetch(url,{
         method: "GET",
-        headers: {"subscription-key": "ca7e563eca174a80ad82eef61fc40776"}
+        headers: {"subscription-key": "805f56b529eb41a4b637be5b35154149"}
         })
       .then((res) => res.json());
     }
