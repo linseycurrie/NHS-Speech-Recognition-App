@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import SpeechComponent from './SpeechComponent';
+import React, {useState, useEffect} from 'react';
 
-const SearchBarComponent = () => {
+const SearchBarComponent = ({transcript}) => {
 
     const [searchTerm, setSearchTerm] = useState("")
 
-    const handleSpeechInput = function(input){
-        setSearchTerm(input.transcript)
-    }
+    useEffect(() => {
+        setSearchTerm(transcript)
+    }, [transcript])
+    
 
     const handleTypedInput = function(event){
         const typedInput = event.target.value;
@@ -27,9 +27,8 @@ const SearchBarComponent = () => {
                 <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} />
                 <input type="submit" />
             </form>
-            <SpeechComponent onSpeech={handleSpeechInput}/>
         </>
     )
 }
 
-export default SearchBarComponent;
+export default SearchBarComponent;   
