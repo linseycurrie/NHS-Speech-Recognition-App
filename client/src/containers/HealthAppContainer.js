@@ -3,6 +3,7 @@ import InformationDetailComponent from '../components/InformationDetailComponent
 import InformationListComponent from '../components/InformationListComponent';
 import SpeechComponent from '../components/SpeechComponent';
 import UserFormComponent from '../components/UserFormComponent';
+import ReminderComponent from '../components/ReminderComponent';
 import Request from '../helpers/request'
 
 const HealthAppContainer = () => {
@@ -37,8 +38,6 @@ const HealthAppContainer = () => {
     return(
         <>
             <p>Container</p>
-            
-            
         
             <SpeechComponent onSearch={handleSearchRequest}/>
             <InformationListComponent />
