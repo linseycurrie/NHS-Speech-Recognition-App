@@ -42,6 +42,7 @@ const HealthAppContainer = () => {
             <InformationListComponent />
             <InformationDetailComponent searchResult={searchResult} />
             <UserFormComponent onCreate={handlePost} />
+            <ReminderComponent />
         </>
     )
 }
