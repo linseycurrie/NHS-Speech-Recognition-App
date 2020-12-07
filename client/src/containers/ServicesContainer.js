@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ServicesComponent from '../components/ServicesComponent';
 import Request from '../helpers/request'
+import axios from 'axios';
+// const axios = require('axios');
 
 const ServicesContainer = () => {
 
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
 
+    useEffect(() => {
+        handleSearchRequest("newark")
+    }, [])
+
     const handleSearchRequest = function(searchTerm) {
-        const request = new Request();
-        const body = {
+        // const request = new Request();
+        // let body = {
+        //     "filter": "(OrganisationTypeID eq 'DEN') or (OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'HOS')",
+        //     "top": 25,
+        //     "skip": 0,
+        //     "count": true
+        // }
+        // request.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + searchTerm, body)
+        // .then((data) => {setServiceSearchResult(data)})
+
+        let body = {
             "filter": "(OrganisationTypeID eq 'DEN') or (OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'HOS')",
             "top": 25,
             "skip": 0,
             "count": true
-        }
-        const searchRequest = request.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=newark", body)
-        .then((data) => {setServiceSearchResult(data)})
+        };
+         
+        let request = axios.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + searchTerm, {
+            headers: {
+                "Content-Type": "application/json",
+                "subscription-key": "ca7e563eca174a80ad82eef61fc40776"
+            },
+            data: body
+        });
+
+        request.then((data) => {
+            setServiceSearchResult(data);
+        });
     }
 
     return(

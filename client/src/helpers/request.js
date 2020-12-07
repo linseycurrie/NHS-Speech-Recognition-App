@@ -3,7 +3,7 @@ class Request {
     get(url) {
       return fetch(url,{
         method: "GET",
-        headers: {"subscription-key": "805f56b529eb41a4b637be5b35154149"}
+        headers: {"subscription-key": "ca7e563eca174a80ad82eef61fc40776", 'Content-Type': 'application/json'}
         })
       .then((res) => res.json());
     }
@@ -18,7 +18,10 @@ class Request {
     post(url, payload){
       return fetch(url, {
         method: "POST",
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json',
+          'subscription-key': 'ca7e563eca174a80ad82eef61fc40776'
+        },
         body: JSON.stringify(payload)
       })
     }
