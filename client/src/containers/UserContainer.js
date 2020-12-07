@@ -1,5 +1,6 @@
 import React from 'react';
 import UserFormComponent from '../components/UserFormComponent';
+import ReminderComponent from '../components/ReminderComponent';
 
 const UserContainer = () => {
 

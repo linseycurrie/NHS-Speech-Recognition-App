@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
-import UserFormComponent from '../components/UserFormComponent';
+
 import Request from '../helpers/request'
 
 
