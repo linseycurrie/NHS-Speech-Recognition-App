@@ -1,5 +1,5 @@
 import React from 'react';
-import HealthAppContainer from './HealthAppContainer';
+import ConditionsContainer from './ConditionsContainer';
 import ServicesContainer from './ServicesContainer';
 import UserContainer from './UserContainer';
 import NavBar from '../components/NavBar';
@@ -12,7 +12,7 @@ const MainAppContainer = () => {
         <>
         <NavBar /> 
         <Switch>
-            <Route exact path="/" component={HealthAppContainer} />
+            <Route exact path="/" component={ConditionsContainer} />
 
             <Route exact path="/services" component={ServicesContainer} />
             

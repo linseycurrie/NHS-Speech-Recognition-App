@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
-
 import Request from '../helpers/request'
 
 
