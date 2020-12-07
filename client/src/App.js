@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import HealthAppContainer from './containers/HealthAppContainer';
-import ServicesContainer from './containers/ServicesContainer';
+import MainAppContainer from "./containers/MainAppContainer";
+
 
 function App() {
   return (
     <div className="App">
-      <HealthAppContainer />
-      <ServicesContainer />
+      <MainAppContainer></MainAppContainer>
     </div>
   );
 }

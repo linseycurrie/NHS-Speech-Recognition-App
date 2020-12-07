@@ -11,7 +11,8 @@ const SearchBarComponent = ({onSearch, transcript}) => {
 
     const handleTypedInput = function(event){
         const typedInput = event.target.value;
-        setSearchTerm(typedInput)
+        const lowerCaseInput = typedInput.toLowerCase()
+        setSearchTerm(lowerCaseInput)
     }
 
     const handleSubmit = function(event) {
@@ -23,7 +24,7 @@ const SearchBarComponent = ({onSearch, transcript}) => {
         <>
             <p>Search:</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} />
+                <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} required />
                 <input type="submit" />
             </form>
         </>
