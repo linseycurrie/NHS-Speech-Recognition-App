@@ -9,7 +9,7 @@ const ServicesContainer = () => {
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
 
     useEffect(() => {
-        handleSearchRequest("newark")
+        handleSearchRequest("lacock")
     }, [])
 
     const handleSearchRequest = function(searchTerm) {
@@ -24,18 +24,17 @@ const ServicesContainer = () => {
         // .then((data) => {setServiceSearchResult(data)})
 
         let body = {
-            "filter": "(OrganisationTypeID eq 'DEN') or (OrganisationTypeID eq 'GPB') or (OrganisationTypeID eq 'HOS')",
-            "top": 25,
+            "filter": "(OrganisationTypeID eq 'DEN')",
+            "top": 10,
             "skip": 0,
             "count": true
         };
          
-        let request = axios.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + searchTerm, {
+        let request = axios.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=" + searchTerm, body, {
             headers: {
                 "Content-Type": "application/json",
                 "subscription-key": "ca7e563eca174a80ad82eef61fc40776"
-            },
-            data: body
+            }
         });
 
         request.then((data) => {
