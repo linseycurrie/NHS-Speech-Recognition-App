@@ -8,18 +8,18 @@ import Request from '../helpers/request'
 const HealthAppContainer = () => {
 
     const [condition, setCondition] = useState({});
-    const [searchResult, setSearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState(null);
 
-    const requestAll = function(){
-        const request = new Request();
-        const conditionRequest = request.get("https://api.nhs.uk/conditions/?category=b&synonyms=false&childArticles=false")
-        .then((data) => {setCondition(data)})
+    // const requestAll = function(){
+    //     const request = new Request();
+    //     const conditionRequest = request.get("https://api.nhs.uk/conditions/?category=b&synonyms=false&childArticles=false")
+    //     .then((data) => {setCondition(data)})
        
-    }
+    // }
 
-    useEffect(() => {
-        requestAll()
-    }, [])
+    // useEffect(() => {
+    //     requestAll()
+    // }, [])
 
     const handlePost = function(user){
         const request = new Request();
