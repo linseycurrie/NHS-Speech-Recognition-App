@@ -32,7 +32,6 @@ const HealthAppContainer = () => {
         const request = new Request();
         const searchRequest = request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
         .then((data) => {setSearchResult(data)})
-
     }
 
     return(
