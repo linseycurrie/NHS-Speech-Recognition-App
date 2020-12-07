@@ -1,6 +1,7 @@
 import React from 'react';
 import UserFormComponent from '../components/UserFormComponent';
 import ReminderComponent from '../components/ReminderComponent';
+import Request from '../helpers/request'
 
 const UserContainer = () => {
 
