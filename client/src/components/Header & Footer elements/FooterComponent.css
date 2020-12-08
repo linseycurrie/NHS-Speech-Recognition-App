@@ -3,9 +3,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 25px 0;
-}
-
-.nhs-footer-logo {
-    padding-bottom: 30px;
+    padding: 15px 0;
 }
