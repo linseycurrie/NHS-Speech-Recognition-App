@@ -5,3 +5,7 @@ footer {
     width: 100%;
     padding: 15px 0;
 }
+
+footer > a > img {
+    width: 200px;
+}

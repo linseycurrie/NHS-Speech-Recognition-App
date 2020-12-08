@@ -5,7 +5,6 @@ import UserFormComponent from './UserFormComponent';
 const UserList = ({allUsers}) => {
     
     if(!allUsers){
-        console.log("request result:", allUsers)
         return "Loading ...UserList"
     }
     

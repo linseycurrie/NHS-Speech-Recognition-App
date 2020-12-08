@@ -22,7 +22,7 @@ class ReminderComponent extends Component {
       viewType: "Week",
       weekStarts: 0,
       locale: "en-gb",
-      headerDateFormat: "d MMMM yyyy",
+      headerDateFormat: "dddd d MMM yyyy",
       durationBarVisible: true,
       timeRangeSelectedHandling: "Enabled",
       onTimeRangeSelected: args => {
