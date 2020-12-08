@@ -71,8 +71,8 @@ class ReminderComponent extends Component {
         {
           id: 2,
           text: "Open Heart Surgey @ Golden Jubilee Hospital ",
-          start: "2020-12-11T11:15:00",
-          end: "2020-12-11T16:30:00",
+          start: "2021-12-10T11:15:00",
+          end: "2021-12-10T16:30:00",
           backColor: "#cc4125"
         },
       ]

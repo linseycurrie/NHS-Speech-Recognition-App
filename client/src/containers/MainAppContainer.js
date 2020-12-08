@@ -4,6 +4,7 @@ import ServicesContainer from './ServicesContainer';
 import UserContainer from './UserContainer';
 import NavBar from '../components/NavBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import ReminderContainer from './ReminderContainer';
 
 const MainAppContainer = () => {
 
@@ -16,8 +17,9 @@ const MainAppContainer = () => {
 
             <Route exact path="/services" component={ServicesContainer} />
             
-
             <Route exact path="/user" component={UserContainer} />
+
+            <Route exact path='/reminders' component={ReminderContainer} />
         </Switch>
         </>
         </Router>
