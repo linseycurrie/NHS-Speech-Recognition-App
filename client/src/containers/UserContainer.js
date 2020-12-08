@@ -23,7 +23,7 @@ const UserContainer = () => {
 
     const handlePost = function(user){
         const request = new Request();
-        request.post("/api/", user)
+        request.post("/api/", user +"s")
         .then(() => window.location = "/user")
     }
 
@@ -53,11 +53,11 @@ const UserContainer = () => {
         <Router>
         <>
         <HeaderComponent headerCopy={headerCopy} />
-        <UserFormComponent onCreate={handlePost} />
-        <Switch>
+        
+
 
         
-        <Route exact path="/user/new" render={() => {
+        <Route exact path="/user" render={() => {
             return <UserFormComponent onCreate={handlePost} />
         }} />
 
@@ -71,7 +71,7 @@ const UserContainer = () => {
             return <UserListComponent allUsers={allUsers} />
         }} />
         
-        </Switch>
+  
         </>
         </Router>
     )
