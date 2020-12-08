@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const User = ({user}) => {
 
     if(!user){
-        return "Loading ..."
+        return "UserLoading ..."
     }
 
     const url = "/user/" + user.id
@@ -14,6 +14,7 @@ const User = ({user}) => {
         <Link to = {url} >
         <p>{user.firstName} {user.lastName} </p>
         </Link>
+     
         </>
     )
 }

@@ -6,6 +6,7 @@ const HeaderComponent = ({headerCopy}) => {
     <>
         <h1>{headerCopy}</h1>
         <img className="rainbow-seperator" src="/rainbow-seperator.png" alt=""></img>
+        <br></br>
     </>
     )
 }

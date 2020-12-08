@@ -4,12 +4,12 @@ import UserDetailComponenet from '../components/UserComponents/UserDetailCompone
 import UserListComponent from "../components/UserComponents/UserListComponent";
 import Request from '../helpers/request'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import {Link} from 'react-router-dom';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 
 const UserContainer = () => {
 
     const [allUsers, setAllUsers] = useState([]);
+    const [selectedUser, setSelectedUser] = useState(null);
    
 
     const requestAllUsers = function(){
@@ -23,7 +23,7 @@ const UserContainer = () => {
 
     const handlePost = function(user){
         const request = new Request();
-        request.post("/api/", user +"s")
+        request.post("/api/users", user)
         .then(() => window.location = "/user")
     }
 
@@ -35,10 +35,22 @@ const UserContainer = () => {
 
     const handleDelete = function(id){
         const request = new Request();
-        const url = "/api/users/" + id
+        const url = "api/users/" + id
         request.delete(url)
         .then(() => window.location = "/user")
-      }
+    }
+
+    const handleUpdate = function(pirate){
+        const request = new Request();
+        request.patch("/api/users/" + pirate.id, pirate)
+        .then(() => window.location = "/user")
+    }
+
+    const handleDisplayUserDetail = function(id){
+        console.log(id)
+        const user = findUserById(id)
+        setSelectedUser(user)
+    }
     
     useEffect(() => {
         requestAllUsers()
@@ -50,30 +62,16 @@ const UserContainer = () => {
     }
 
     return(
-        <Router>
+
         <>
         <HeaderComponent headerCopy={headerCopy} />
-        
 
+        <UserListComponent allUsers={allUsers} onSelection={handleDisplayUserDetail} />
 
-        
-        <Route exact path="/user" render={() => {
-            return <UserFormComponent onCreate={handlePost} />
-        }} />
-
-        <Route exact path="/user/:id" render={(props) => {
-            const id = props.match.params.id;
-            const user = findUserById(id);
-            return <UserDetailComponenet user={user} onDelete={handleDelete}/>
-        }} />
-
-        <Route render={() => {
-            return <UserListComponent allUsers={allUsers} />
-        }} />
-        
-  
+        <UserDetailComponenet selectedUser={selectedUser}  onDelete={handleDelete}/>
+      
+        <UserFormComponent onCreate={handlePost} onUpdate={handleUpdate} />
         </>
-        </Router>
     )
     
 }

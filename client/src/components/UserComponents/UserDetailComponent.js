@@ -1,21 +1,22 @@
 import React from 'react';
 import User from './User';
 
-const UserDetailComponent = ({user, onDelete}) => {
+const UserDetailComponent = ({selectedUser, onDelete}) => {
     
     const handleDelete = () => {
-        onDelete(user.id)
+        onDelete(selectedUser.id)
     }
 
-    if(!user){
-        return "Loading..."
+    if(!selectedUser){
+        return null
     }
     return(
         <>
-        <User user={user} />
-        <p>{user.age}</p>
-        <p>{user.email}</p>
-        <button onClick={handleDelete}>Delete {user.firstName}</button>
+        <p>{selectedUser.firstName} {selectedUser.lastName}</p>
+        <p>{selectedUser.age}</p>
+        <p>{selectedUser.email}</p>
+        <button onClick={handleDelete}>Delete</button>
+        <br></br>
         </>
     )
 }

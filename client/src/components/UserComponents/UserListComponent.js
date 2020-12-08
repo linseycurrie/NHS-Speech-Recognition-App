@@ -1,29 +1,31 @@
 import React from 'react';
 import User from './User';
-import UserFormComponent from './UserFormComponent';
 
-const UserList = ({allUsers}) => {
+const UserListComponent = ({allUsers, onSelection}) => {
     
     if(!allUsers){
-        return "Loading ...UserList"
+        return "UserListLoading ..."
     }
-    
+
+    const handleSelection = function(event){
+        const id = event.target.value
+        onSelection(id)
+    }
+
     const userNodes = allUsers.map((user, index) => {
         return (
-            <>
-            <div>
-            <li key={index}>
-                <User user={user} />
-            </li>
-            </div>
-            
-            </>
+            <option  key={index} value={user.id}>
+                {user.firstName} {user.lastName}
+            </option>
+           
         )
     })
     return(
-        <ul>
+
+        <select onChange={handleSelection}>
+        <option selected disabled>Select User</option>
         {userNodes}
-        </ul>
+        </select>
     )
 }
-export default UserList;
+export default UserListComponent;
