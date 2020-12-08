@@ -22,7 +22,7 @@ const SearchBarComponent = ({onSearch, transcript}) => {
 
     return(
         <>
-            <h3>Search for condition:</h3>
+            <h3>Search a condition:</h3>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} required />
                 <input type="submit" />

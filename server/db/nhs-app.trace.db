@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+2020-12-08 13:51:59 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+=======
 2020-12-08 14:04:04 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/codeclanstudent/Desktop/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -29,6 +34,17 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]
+=======
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
@@ -38,11 +54,23 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/codeclanstudent/Desktop/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1107)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2020-12-08 13:52:32 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+=======
 	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
 	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
 	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
@@ -52,6 +80,7 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	... 28 more
 2020-12-08 14:15:07 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/codeclanstudent/Desktop/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -81,6 +110,17 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
 	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
+<<<<<<< HEAD
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/davidstrain/codeclan_work/health_app_final_project/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]
+=======
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
@@ -90,11 +130,21 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.I
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/codeclanstudent/Desktop/FinalGroupProject-JavaScriptReactJavaSpring/server/db/nhs-app.mv.db [1.4.200/7]
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 27 more
 Caused by: java.nio.channels.OverlappingFileLockException
+<<<<<<< HEAD
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1107)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+=======
 	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
 	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
 	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1154)
@@ -638,3 +688,4 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1082)
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
 	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:998)
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223

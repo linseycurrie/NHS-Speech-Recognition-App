@@ -2,4 +2,37 @@
   text-align: center;
 }
 
+input[type=text] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 300;
+  margin: 15px;
+}
 
+input[type=submit] {
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  padding: 0 20px;
+}
+
+button {
+  background-color: rgb(77, 159, 209);
+  color: white;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  padding: 0 20px;
+  margin: 0 5px;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import './HeaderComponent.css';
 
-const HeaderComponent = ({headerCopy}) => {
+const HeaderComponent = ({headerCopy, headerBanner}) => {
     return(
     <>
         <h1>{headerCopy}</h1>
         <img className="rainbow-seperator" src="/rainbow-seperator.png" alt=""></img>
-        <br></br>
+        <img className="header-image" src={headerBanner} alt=""></img>
     </>
     )
 }
