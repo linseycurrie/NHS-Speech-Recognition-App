@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ServicesComponent from '../components/ServicesComponent';
-import HeaderComponent from '../components/HeaderComponent'
+import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent'
 import Request from '../helpers/request'
 
 const ServicesContainer = () => {

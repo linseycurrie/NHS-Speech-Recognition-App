@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
-import HeaderComponent from '../components/HeaderComponent';
+import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 import Request from '../helpers/request'
 
 
