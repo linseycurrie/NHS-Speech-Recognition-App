@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import InformationDetailComponent from '../components/InformationDetailComponent';
-import InformationListComponent from '../components/InformationListComponent';
+import InformationDetailComponent from '../components/ConditionInformationComponents/InformationDetailComponent';
+import InformationListComponent from '../components/ConditionInformationComponents/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
 import UserFormComponent from '../components/UserFormComponent';
 import ReminderComponent from '../components/ReminderComponent';

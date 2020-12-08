@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {DayPilot, DayPilotCalendar, DayPilotNavigator} from "daypilot-pro-react";
-import '../ReminderStyle.css';
+import '../ReminderComponents/ReminderStyle.css';
 
 const styles = {
   wrap: {
