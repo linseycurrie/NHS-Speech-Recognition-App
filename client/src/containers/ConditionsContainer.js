@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
@@ -13,7 +13,7 @@ const HealthAppContainer = () => {
 
     const handleSearchRequest = function(searchTerm) {
         const request = new Request();
-        const searchRequest = request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
+        request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
         .then((data) => {setSearchResult(data)})
     }
 

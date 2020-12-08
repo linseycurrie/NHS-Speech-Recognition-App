@@ -10,6 +10,7 @@ const ReminderContainer = () => {
     const handlePost = function(reminder) {
         const request = new Request();
         request.post('/api/reminders', reminder)
+        .then(() => window.location = "/")
     }
 
     return(
