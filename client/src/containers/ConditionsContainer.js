@@ -8,7 +8,9 @@ import Request from '../helpers/request'
 
 const HealthAppContainer = () => {
 
-    const headerCopy = "Welcome to your NHS Health App"
+    const headerCopy = "Welcome to your NHS Health App";
+    const headerBanner = "/nhs-staff-2.jpg";
+
     const [searchResult, setSearchResult] = useState(null);
 
     const handleSearchRequest = function(searchTerm) {
@@ -19,7 +21,7 @@ const HealthAppContainer = () => {
 
     return(
         <>
-            <HeaderComponent headerCopy={headerCopy} />
+            <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
             <SpeechComponent onSearch={handleSearchRequest} />
             <InformationDetailComponent searchResult={searchResult} />
         </>

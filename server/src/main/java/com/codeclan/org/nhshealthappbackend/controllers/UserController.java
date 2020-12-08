@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/users")
     public ResponseEntity<List<User>> getAllUsers() {
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
     }
@@ -25,7 +25,7 @@ public class UserController {
 //        return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
 //    }
 
-    @PostMapping(value = "/")
+    @PostMapping(value = "/users")
     public ResponseEntity<User> postUser(@RequestBody User user) {
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
@@ -36,11 +36,11 @@ public class UserController {
 //        userRepository.save(user);
 //        return new ResponseEntity<>(user, HttpStatus.OK);
 //    }
-//
-//    @DeleteMapping(value = "/users/{id}")
-//    public ResponseEntity<User> deletePirate(@PathVariable Long id) {
-//        User found = userRepository.getOne(id);
-//        userRepository.delete(found);
-//        return new ResponseEntity<>(found, HttpStatus.OK);
-//    }
+
+    @DeleteMapping(value = "/users/{id}")
+    public ResponseEntity<User> deletePirate(@PathVariable Long id) {
+        User found = userRepository.getOne(id);
+        userRepository.delete(found);
+        return new ResponseEntity<>(found, HttpStatus.OK);
+    }
 }
