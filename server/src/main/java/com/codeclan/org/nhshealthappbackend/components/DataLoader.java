@@ -31,13 +31,13 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        User linsey = new User("Linsey", "Currie", 21);
+        User linsey = new User("Linsey", "Currie", "07/05/1987", "linsey@gmail.com","G81 6PT");
         userRepository.save(linsey);
 
-        User david = new User("David", "Strain", 21);
+        User david = new User("David", "Strain", "15/03/1984", "david@gmail.com", "G3 2AA");
         userRepository.save(david);
 
-        User tj = new User("TJ","Pataria", 34);
+        User tj = new User("TJ","Pataria", "05/02/1985", "tj@gmail.com", "G63 7JA");
         userRepository.save(tj);
 
         Favourite fav1 = new Favourite("Diabetes", "condition","nhs.co.uk");

@@ -33,6 +33,10 @@ const UserFormComponent = ({onCreate}) => {
                     <input text="text" id="lastName" name="lastName" onChange={handleChange}></input><br />
                     <label htmlFor="age">Age:</label><br />
                     <input text="number" id="age" name="age" onChange={handleChange}></input><br />
+                    <label htmlFor="email">Email:</label><br />
+                    <input text="String" id="email" name="email" onChange={handleChange}></input><br />
+                    <label htmlFor="postcode">PostCode:</label><br />
+                    <input text="String" id="postcode" name="postcode" onChange={handleChange}></input><br />
                     <button type="submit">Submit</button>
                 </div>
                 {/* <div className="form-conditionDetails">

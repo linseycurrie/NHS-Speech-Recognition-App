@@ -19,23 +19,34 @@ public class UserController {
     public ResponseEntity<List<User>> getAllUsers() {
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
     }
-//
-//    @GetMapping(value = "/users/{id}")
-//    public ResponseEntity getUser(@PathVariable Long id) {
-//        return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
-//    }
 
+<<<<<<< HEAD
+=======
+    @GetMapping(value = "/users/{id}")
+    public ResponseEntity getUser(@PathVariable Long id) {
+        return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
+    }
+
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
     @PostMapping(value = "/users")
     public ResponseEntity<User> postUser(@RequestBody User user) {
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
+<<<<<<< HEAD
 //    @PatchMapping(value = "/users/{id}")
 //    public ResponseEntity<User> updateUser(@RequestBody User user){
 //        userRepository.save(user);
 //        return new ResponseEntity<>(user, HttpStatus.OK);
 //    }
+=======
+    @PatchMapping(value = "/users/{id}")
+    public ResponseEntity<User> updateUser(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+>>>>>>> f49c60c6e3546e9551b009f4b9cb43706e0e0223
 
     @DeleteMapping(value = "/users/{id}")
     public ResponseEntity<User> deletePirate(@PathVariable Long id) {
