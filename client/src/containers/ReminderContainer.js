@@ -1,8 +1,12 @@
 import React from 'react';
+import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 import ReminderComponent from '../components/ReminderComponent';
 import Request from '../helpers/request'
 
 const ReminderContainer = () => {
+
+    const headerCopy = "Your Reminders"
+
     const handlePost = function(reminder) {
         const request = new Request();
         request.post('/api/reminders', reminder)
@@ -10,7 +14,10 @@ const ReminderContainer = () => {
     }
 
     return(
-        <ReminderComponent onCreate={handlePost} />
+        <>
+            <HeaderComponent headerCopy={headerCopy}/>
+            <ReminderComponent onCreate={handlePost} />
+        </>
     )
 }
 
