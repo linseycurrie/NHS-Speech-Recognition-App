@@ -20,7 +20,7 @@ ul {
     flex-direction: row;
 }
 
-.nav-links > ul > li {
+.navLink {
     padding-right: 25px;
     list-style-type: none;
 }
