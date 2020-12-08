@@ -5,6 +5,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,8 +19,12 @@ public class User {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-    @Column(name = "age")
-    private int age;
+    @Column(name = "dob")
+    private String dob;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "postcode")
+    private String postcode;
 
     @JsonIgnoreProperties(value = "users")
     @ManyToMany
@@ -55,10 +60,12 @@ public class User {
 //    @JoinColumn(name = "condition_id", nullable = false)
 
 
-    public User(String firstName, String lastName, int age) {
+    public User(String firstName, String lastName, String dob, String email, String postcode) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.dob = dob;
+        this.email = email;
+        this.postcode = postcode;
         this.favourites = new ArrayList<Favourite>();
         this.conditions = new ArrayList<Condition>();
         this.reminders = new ArrayList<Reminder>();
@@ -90,12 +97,12 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
+    public String getDob() {
+        return dob;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public List<Favourite> getFavourites() {
@@ -132,5 +139,21 @@ public class User {
 
     public void addReminder(Reminder reminder) {
         this.reminders.add(reminder);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 }
