@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+
 
 const UserListComponent = ({allUsers, onSelection}) => {
     

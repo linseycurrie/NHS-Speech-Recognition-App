@@ -21,6 +21,7 @@ const InformationDetailComponent = ({searchResult}) => {
         return(
             <>
                 <h2>{searchResult.name}</h2>
+                <p>{searchResult.description}</p>
                 {ReactHtmlParser(newArray)}
             </>
         )
