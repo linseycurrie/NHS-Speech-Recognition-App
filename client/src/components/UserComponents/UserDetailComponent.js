@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+
 
 const UserDetailComponent = ({selectedUser, onDelete}) => {
     
@@ -13,8 +13,9 @@ const UserDetailComponent = ({selectedUser, onDelete}) => {
     return(
         <>
         <p>{selectedUser.firstName} {selectedUser.lastName}</p>
-        <p>{selectedUser.age}</p>
+        <p>{selectedUser.dob}</p>
         <p>{selectedUser.email}</p>
+        <p>{selectedUser.postcode}</p>
         <button onClick={handleDelete}>Delete</button>
         <br></br>
         </>

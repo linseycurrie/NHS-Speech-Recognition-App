@@ -3,7 +3,7 @@ import UserFormComponent from '../components/UserComponents/UserFormComponent';
 import UserDetailComponenet from '../components/UserComponents/UserDetailComponent';
 import UserListComponent from "../components/UserComponents/UserListComponent";
 import Request from '../helpers/request'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 
 const UserContainer = () => {
