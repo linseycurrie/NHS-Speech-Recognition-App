@@ -16,17 +16,17 @@ public class ReminderController {
     @Autowired
     ReminderRepository reminderRepository;
 
-//    @GetMapping(value = "/reminders")
-//    public ResponseEntity<List<Reminder>> getAllReminders() {
-//        return new ResponseEntity<>(reminderRepository.findAll(), HttpStatus.OK);
-//    }
+    @GetMapping(value = "/reminders")
+    public ResponseEntity<List<Reminder>> getAllReminders() {
+        return new ResponseEntity<>(reminderRepository.findAll(), HttpStatus.OK);
+    }
 //
 //    @GetMapping(value = "/reminders/{id}")
 //    public ResponseEntity getReminder(@PathVariable Long id) {
 //        return new ResponseEntity<>(reminderRepository.findById(id), HttpStatus.OK);
 //    }
 //
-//    @PostMapping(value = "/")
+//    @PostMapping(value = "/reminders")
 //    public ResponseEntity<Reminder> postReminder(@RequestBody Reminder reminder) {
 //        reminderRepository.save(reminder);
 //        return new ResponseEntity<>(reminder, HttpStatus.CREATED);
