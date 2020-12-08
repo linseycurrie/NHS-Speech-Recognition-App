@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavBar.css';
 
 const NavBar = () => {
 
@@ -15,8 +16,9 @@ const NavBar = () => {
             <li className="navLink">
                 <a href="/services">Find Services</a>
             </li>
-
-
+            <li className="navLink">
+                <a href="/reminders">Reminders</a>
+            </li>
         </ul>
         </header>
     )

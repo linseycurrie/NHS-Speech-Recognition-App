@@ -5,6 +5,7 @@ import UserListComponent from "../components/UserComponents/UserListComponent";
 import Request from '../helpers/request'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 
 const UserContainer = () => {
 
@@ -17,6 +18,8 @@ const UserContainer = () => {
         .then((data) => {setAllUsers(data)})
         
     }
+
+    const headerCopy = "Your Personal Details"
 
     const handlePost = function(user){
         const request = new Request();
@@ -39,7 +42,7 @@ const UserContainer = () => {
     
     useEffect(() => {
         requestAllUsers()
-    }, [])
+    }, [allUsers])
 
 
     if(!allUsers){
@@ -49,6 +52,8 @@ const UserContainer = () => {
     return(
         <Router>
         <>
+        <HeaderComponent headerCopy={headerCopy} />
+        <UserFormComponent onCreate={handlePost} />
         <Switch>
 
         
@@ -66,9 +71,10 @@ const UserContainer = () => {
             return <UserListComponent allUsers={allUsers} />
         }} />
         
-        </ Switch>
+        </Switch>
         </>
         </Router>
     )
+    
 }
 export default UserContainer;

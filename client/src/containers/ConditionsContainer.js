@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import InformationDetailComponent from '../components/InformationDetailComponent';
 import SpeechComponent from '../components/SpeechComponent';
+import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 import Request from '../helpers/request'
 
 
 
 const HealthAppContainer = () => {
 
+    const headerCopy = "Welcome to your NHS Health App"
     const [searchResult, setSearchResult] = useState(null);
-
-
 
     const handleSearchRequest = function(searchTerm) {
         const request = new Request();
@@ -19,6 +19,7 @@ const HealthAppContainer = () => {
 
     return(
         <>
+            <HeaderComponent headerCopy={headerCopy} />
             <SpeechComponent onSearch={handleSearchRequest} />
             <InformationDetailComponent searchResult={searchResult} />
         </>

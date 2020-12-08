@@ -10,8 +10,6 @@ const UserFormComponent = ({onCreate}) => {
         }
     )
 
-
-
     const handleChange = function(event){
         let propertyName = event.target.name;
         let copiedUser = {...stateUser}
