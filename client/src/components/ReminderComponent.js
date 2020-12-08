@@ -20,11 +20,14 @@ class ReminderComponent extends Component {
     super(props);
     this.state = {
       viewType: "Week",
+      weekStarts: 0,
+      locale: "en-gb",
+      headerDateFormat: "d MMMM yyyy",
       durationBarVisible: true,
       timeRangeSelectedHandling: "Enabled",
       onTimeRangeSelected: args => {
-        let dp = this.calendar;
-        DayPilot.Modal.prompt("").then(function(modal) {
+        let dp = this.calendar; 
+        DayPilot.Modal.prompt("Create new appointment reminder:").then(function(modal) {
           dp.clearSelection();
           if (!modal.result) { return; }
           dp.events.add(new DayPilot.Event({
@@ -38,7 +41,7 @@ class ReminderComponent extends Component {
       eventDeleteHandling: "Update",
       onEventClick: args => {
         let dp = this.calendar;
-        DayPilot.Modal.prompt("Update reminder text:", args.e.text()).then(function(modal) {
+        DayPilot.Modal.prompt("Update appointment reminder:", args.e.text()).then(function(modal) {
           if (!modal.result) { return; }
           args.e.data.text = modal.result;
           dp.events.update(args.e);
@@ -50,26 +53,26 @@ class ReminderComponent extends Component {
   componentDidMount() {
 
     this.setState({
-      startDate: "2021-12-07",
+      startDate: "2020-12-06",
       events: [
         {
           id: 1,
           text: "New Filling @ Dentist",
-          start: "2021-12-08T10:30:00",
-          end: "2021-12-08T12:00:00"
+          start: "2020-12-08T10:30:00",
+          end: "2020-12-08T12:00:00"
         },
         {
           id: 2,
           text: "Diabetes Clinic @ QE Hospital",
-          start: "2021-12-09T09:30:00",
-          end: "2021-12-09T10:30:00",
+          start: "2020-12-09T09:30:00",
+          end: "2020-12-09T10:30:00",
           backColor: "#38761d"
         },
         {
           id: 2,
           text: "Open Heart Surgey @ Golden Jubilee Hospital ",
-          start: "2021-12-11T11:15:00",
-          end: "2021-12-11T16:30:00",
+          start: "2021-12-10T11:15:00",
+          end: "2021-12-10T16:30:00",
           backColor: "#cc4125"
         },
       ]

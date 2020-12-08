@@ -1,6 +1,5 @@
 import React from 'react';
 import UserFormComponent from '../components/UserFormComponent';
-import ReminderComponent from '../components/ReminderComponent';
 import Request from '../helpers/request'
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 

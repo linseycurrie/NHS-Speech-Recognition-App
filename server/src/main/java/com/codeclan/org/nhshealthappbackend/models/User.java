@@ -41,6 +41,10 @@ public class User {
     )
     private List<Condition> conditions;
 
+    @JsonIgnoreProperties({"user"})
+    @OneToMany(mappedBy = "user")
+    private List<Reminder> reminders;
+
 //    @JsonIgnoreProperties({"users"})
 //    @OneToMany
 //    @JoinColumn(name = "favourite_id", nullable = false)
@@ -57,6 +61,7 @@ public class User {
         this.age = age;
         this.favourites = new ArrayList<Favourite>();
         this.conditions = new ArrayList<Condition>();
+        this.reminders = new ArrayList<Reminder>();
     }
 
     public User() {}
@@ -115,5 +120,17 @@ public class User {
 
     public void addCondition(Condition condition){
         this.conditions.add(condition);
+    }
+
+    public List<Reminder> getReminders() {
+        return reminders;
+    }
+
+    public void setReminders(List<Reminder> reminders) {
+        this.reminders = reminders;
+    }
+
+    public void addReminder(Reminder reminder) {
+        this.reminders.add(reminder);
     }
 }

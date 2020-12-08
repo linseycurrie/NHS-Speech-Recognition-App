@@ -1,9 +1,11 @@
 package com.codeclan.org.nhshealthappbackend.components;
 
 import com.codeclan.org.nhshealthappbackend.models.Favourite;
+import com.codeclan.org.nhshealthappbackend.models.Reminder;
 import com.codeclan.org.nhshealthappbackend.models.User;
 import com.codeclan.org.nhshealthappbackend.repositories.ConditionRepository;
 import com.codeclan.org.nhshealthappbackend.repositories.FavouriteRepository;
+import com.codeclan.org.nhshealthappbackend.repositories.ReminderRepository;
 import com.codeclan.org.nhshealthappbackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -21,6 +23,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    ReminderRepository reminderRepository;
 
     public DataLoader() {}
 
@@ -44,6 +49,9 @@ public class DataLoader implements ApplicationRunner {
         Favourite fav3 = new Favourite("Bad Breath", "condition","nhs.co.uk");
         favouriteRepository.save(fav3);
 
+        Reminder reminder1 = new Reminder("New Filling Dentist","2020-12-08T10:30:00", "2020-12-08T12:00:00", linsey);
+        reminderRepository.save(reminder1);
+
         linsey.addFavourite(fav1);
         userRepository.save(linsey);
 
@@ -52,6 +60,9 @@ public class DataLoader implements ApplicationRunner {
 
         tj.addFavourite(fav3);
         userRepository.save(tj);
+
+        david.addReminder(reminder1);
+        userRepository.save(david);
 
     }
 }
