@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    justify-content: space-around;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links > ul > li {
+    padding-right: 25px;
+    list-style-type: none;
+}

@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: rgb(66, 66, 66);
+}
+.rainbow-seperator {
+    width: 65px;
+}

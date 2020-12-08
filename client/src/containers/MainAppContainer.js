@@ -4,6 +4,8 @@ import ServicesContainer from './ServicesContainer';
 import UserContainer from './UserContainer';
 import NavBar from '../components/NavBar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import FooterComponent from '../components/FooterComponent';
+import './MainAppContainer.css'
 
 const MainAppContainer = () => {
 
@@ -11,14 +13,17 @@ const MainAppContainer = () => {
         <Router>
         <>
         <NavBar /> 
-        <Switch>
-            <Route exact path="/" component={ConditionsContainer} />
+        <section>
+            <Switch>
+                <Route exact path="/" component={ConditionsContainer} />
 
-            <Route exact path="/services" component={ServicesContainer} />
-            
+                <Route exact path="/services" component={ServicesContainer} />
+                
 
-            <Route exact path="/user" component={UserContainer} />
-        </Switch>
+                <Route exact path="/user" component={UserContainer} />
+            </Switch>
+        </section>
+        <FooterComponent />
         </>
         </Router>
     )

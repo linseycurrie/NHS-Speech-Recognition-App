@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ServicesComponent from '../components/ServicesComponent';
+import HeaderComponent from '../components/HeaderComponent'
 import Request from '../helpers/request'
 
 const ServicesContainer = () => {
 
+    const headerCopy = "Find a Service"
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
 
     const handleSearchRequest = function(searchTerm) {
@@ -20,7 +22,7 @@ const ServicesContainer = () => {
 
     return(
         <>
-            <h1>Services Container</h1>
+            <HeaderComponent headerCopy={headerCopy} />
             <ServicesComponent />
         </>
     )
