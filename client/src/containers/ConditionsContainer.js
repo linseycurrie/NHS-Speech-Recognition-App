@@ -19,10 +19,14 @@ const HealthAppContainer = () => {
         .then((data) => {setSearchResult(data)})
     }
 
+    const clearSearchResult = function(){
+        setSearchResult(null)
+    }
+
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
-            <SpeechComponent onSearch={handleSearchRequest} />
+            <SpeechComponent searchResult={searchResult} onReset={clearSearchResult} onSearch={handleSearchRequest} />
             <InformationDetailComponent searchResult={searchResult} />
         </>
     )
