@@ -6,7 +6,7 @@ import Request from '../helpers/request'
 
 
 
-const HealthAppContainer = () => {
+const ConditionsContainer = () => {
 
     const headerCopy = "Welcome to your NHS Health App";
     const headerBanner = "/nhs-staff-2.jpg";
@@ -28,4 +28,4 @@ const HealthAppContainer = () => {
     )
 }
 
-export default HealthAppContainer;
+export default ConditionsContainer;

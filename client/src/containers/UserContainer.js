@@ -19,7 +19,8 @@ const UserContainer = () => {
         
     }
 
-    const headerCopy = "Your Personal Details"
+    const headerCopy = "Your Personal Details";
+    const headerBanner = "/nhs.jpg";
 
     const handlePost = function(user){
         const request = new Request();
@@ -64,7 +65,7 @@ const UserContainer = () => {
     return(
 
         <>
-        <HeaderComponent headerCopy={headerCopy} />
+        <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
 
         <UserListComponent allUsers={allUsers} onSelection={handleDisplayUserDetail} />
 

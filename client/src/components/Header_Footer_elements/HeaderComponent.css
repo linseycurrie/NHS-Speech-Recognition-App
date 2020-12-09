@@ -6,7 +6,8 @@ h1 {
 }
 .rainbow-seperator {
     width: 100px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .header-image {
