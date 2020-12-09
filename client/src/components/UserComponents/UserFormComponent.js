@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './UserFormComponent.css';
 
 const UserFormComponent = ({onCreate}) => {
 
@@ -24,18 +25,18 @@ const UserFormComponent = ({onCreate}) => {
 
     return(
         <>
-            <p>UserForm</p>
+            <h3>Add a new user:</h3>
             <form onSubmit={handleSubmit}>
                 <div className="form-userDetails">
-                    <label htmlFor="firstName">First Name:</label><br />
+                    <label htmlFor="firstName">First Name:</label>
                     <input text="text" id="firstName" name="firstName" onChange={handleChange}></input><br />
-                    <label htmlFor="lastName">Last Name:</label><br />
+                    <label htmlFor="lastName">Last Name:</label>
                     <input text="text" id="lastName" name="lastName" onChange={handleChange}></input><br />
-                    <label htmlFor="age">Age:</label><br />
+                    <label htmlFor="age">Age:</label>
                     <input text="number" id="age" name="age" onChange={handleChange}></input><br />
-                    <label htmlFor="email">Email:</label><br />
+                    <label htmlFor="email">Email:</label>
                     <input text="String" id="email" name="email" onChange={handleChange}></input><br />
-                    <label htmlFor="postcode">PostCode:</label><br />
+                    <label htmlFor="postcode">PostCode:</label>
                     <input text="String" id="postcode" name="postcode" onChange={handleChange}></input><br />
                     <button type="submit">Submit</button>
                 </div>

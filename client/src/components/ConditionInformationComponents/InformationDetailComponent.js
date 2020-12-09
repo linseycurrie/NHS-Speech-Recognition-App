@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import './InformationDetailComponent.css';
 
 const InformationDetailComponent = ({searchResult}) => {
 
@@ -22,7 +23,7 @@ const InformationDetailComponent = ({searchResult}) => {
             <>
                 <h2>{searchResult.name}</h2>
                 <p>{searchResult.description}</p>
-                {ReactHtmlParser(newArray)}
+                {ReactHtmlParser(newArray.join(""))}
             </>
         )
     }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ServicesComponent from '../components/ServicesComponent';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent'
 import Request from '../helpers/request'
@@ -6,6 +6,8 @@ import Request from '../helpers/request'
 const ServicesContainer = () => {
 
     const headerCopy = "Find a Service"
+    const headerBanner = "/gp-surgery.jpg";
+
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
 
     const handleSearchRequest = function(searchTerm) {
@@ -16,13 +18,17 @@ const ServicesContainer = () => {
             "skip": 0,
             "count": true
         }
-        const searchRequest = request.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=newark", body)
+        const searchRequest = request.post("https://api.nhs.uk/service-search/search-postcode-or-place?api-version=1&search=lacock", body)
         .then((data) => {setServiceSearchResult(data)})
     }
 
+    useEffect(() => {
+        handleSearchRequest();
+    }, [])
+
     return(
         <>
-            <HeaderComponent headerCopy={headerCopy} />
+            <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
             <ServicesComponent />
         </>
     )

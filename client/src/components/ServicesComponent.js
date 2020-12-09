@@ -4,7 +4,7 @@ const ServicesComponent = () => {
 
 
     return(
-        <h2>Services Search</h2>
+        <h3>Search for your local GP:</h3>
     )
 }
 
