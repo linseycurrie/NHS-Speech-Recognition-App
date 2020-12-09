@@ -1,8 +1,18 @@
-label {
-    margin: 15px;
+.form-userDetails > label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 250px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    text-align: right;
+    margin-right: 25px;
+    
 }
 
-input[type=text] {
+.form-userDetails > input {
     box-sizing: border-box;
     width: 250px;
     height: 30px;
@@ -11,5 +21,5 @@ input[type=text] {
     font-size: 18px;
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
-    margin: 15px;
+    margin-right: 270px;
   }

@@ -1,3 +1,20 @@
 li::marker {
     color: white;
 }
+
+.info-panel {
+    width: 75%;
+    margin: auto;
+}
+
+.info-panel > h2 {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 35px;
+    color: rgb(66, 66, 66);
+}
+
+.info-panel > h3 {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
+    color: rgb(66, 66, 66);
+}

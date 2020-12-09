@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserListComponent.css';
 
 
 const UserListComponent = ({allUsers, onSelection}) => {
@@ -21,11 +22,13 @@ const UserListComponent = ({allUsers, onSelection}) => {
         )
     })
     return(
-
-        <select onChange={handleSelection}>
-        <option selected disabled>Select User</option>
-        {userNodes}
-        </select>
+        <>
+            <h3>Select a User:</h3>
+            <select onChange={handleSelection}>
+                <option selected disabled>Select User</option>
+                {userNodes}
+            </select>
+        </>
     )
 }
 export default UserListComponent;

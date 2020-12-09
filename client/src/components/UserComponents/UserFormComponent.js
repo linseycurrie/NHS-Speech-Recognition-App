@@ -25,19 +25,19 @@ const UserFormComponent = ({onCreate}) => {
 
     return(
         <>
-            <h3>Add a new user:</h3>
+            <h2>Add a new user:</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-userDetails">
-                    <label htmlFor="firstName">First Name:</label>
-                    <input text="text" id="firstName" name="firstName" onChange={handleChange}></input><br />
-                    <label htmlFor="lastName">Last Name:</label>
-                    <input text="text" id="lastName" name="lastName" onChange={handleChange}></input><br />
-                    <label htmlFor="age">Age:</label>
-                    <input text="number" id="age" name="age" onChange={handleChange}></input><br />
-                    <label htmlFor="email">Email:</label>
-                    <input text="String" id="email" name="email" onChange={handleChange}></input><br />
-                    <label htmlFor="postcode">PostCode:</label>
-                    <input text="String" id="postcode" name="postcode" onChange={handleChange}></input><br />
+                    <label htmlFor="firstName">First Name: </label>
+                    <input text="text" id="firstName" name="firstName" onChange={handleChange} required></input><br /><br />
+                    <label htmlFor="lastName">Last Name: </label>
+                    <input text="text" id="lastName" name="lastName" onChange={handleChange} required></input><br /><br />
+                    <label htmlFor="age">Date of Birth: </label>
+                    <input text="number" id="dob" name="dob" placeholder="DD/MM/YYYY" onChange={handleChange} required></input><br /><br />
+                    <label htmlFor="email">Email: </label>
+                    <input text="String" id="email" name="email" onChange={handleChange} required></input><br /><br />
+                    <label htmlFor="postcode">PostCode: </label>
+                    <input text="String" id="postcode" name="postcode" onChange={handleChange} required></input><br /><br />
                     <button type="submit">Submit</button>
                 </div>
                 {/* <div className="form-conditionDetails">
