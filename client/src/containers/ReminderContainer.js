@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
-import ReminderComponent from '../components/ReminderComponent';
+import ReminderComponent from '../components/ReminderComponents/ReminderComponent';
 import Request from '../helpers/request'
 
 const ReminderContainer = () => {
