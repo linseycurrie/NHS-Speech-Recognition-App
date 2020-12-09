@@ -26,6 +26,7 @@ const SearchBarComponent = ({onSearch, transcript, }) => {
     return(
         <>
             <h3>Search a condition:</h3>
+            <p>You can type your search term into the below field OR you can click "Start" and speak your search term and then hit "Submit".</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} required />
                 <input type="submit" />

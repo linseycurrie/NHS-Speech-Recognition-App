@@ -4,11 +4,9 @@ import React, {Component} from 'react';
 
 
 //     return(
-//         <h2>Services Search</h2>
+//         <h3>Search for your local GP:</h3>
 //     )
 // }
-
-// export default ServicesComponent;
 
 import GoogleMapReact from 'google-map-react';
  

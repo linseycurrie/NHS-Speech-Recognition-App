@@ -5,7 +5,8 @@ import Request from '../helpers/request'
 
 const ReminderContainer = () => {
 
-    const headerCopy = "Your Reminders"
+    const headerCopy = "Your Reminders";
+    const headerBanner = "/calendar.jpg";
 
     const handlePost = function(reminder) {
         const request = new Request();
@@ -15,7 +16,7 @@ const ReminderContainer = () => {
 
     return(
         <>
-            <HeaderComponent headerCopy={headerCopy}/>
+            <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
             <ReminderComponent onCreate={handlePost} />
         </>
     )
