@@ -4,6 +4,7 @@ import UserDetailComponenet from '../components/UserComponents/UserDetailCompone
 import UserListComponent from "../components/UserComponents/UserListComponent";
 import Request from '../helpers/request'
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
+import '../App.css';
 
 const UserContainer = () => {
 

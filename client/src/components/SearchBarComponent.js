@@ -25,11 +25,11 @@ const SearchBarComponent = ({onSearch, transcript, }) => {
 
     return(
         <>
-            <h3>Search a condition:</h3>
-            <p>You can type your search term into the below field OR you can click "Start" and speak your search term and then hit "Submit".</p>
+            <h2>Search a condition:</h2>
+            <p>Please start <b>typing</b> your search term into the below field or<br />click <b>"Start Recording"</b> and speak your search term and then hit <b>"Submit"</b>.</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="e.g. flu" value={searchTerm} onChange={handleTypedInput} required />
-                <input type="submit" />
+                <button type="submit">Search</button>
             </form>
         </>
     )

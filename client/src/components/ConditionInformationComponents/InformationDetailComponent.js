@@ -20,11 +20,11 @@ const InformationDetailComponent = ({searchResult}) => {
         }
   
         return(
-            <>
+            <div className="info-panel">
                 <h2>{searchResult.name}</h2>
-                <p>{searchResult.description}</p>
+                <h3>{searchResult.description}</h3>
                 {ReactHtmlParser(newArray.join(""))}
-            </>
+            </div>
         )
     }
 }

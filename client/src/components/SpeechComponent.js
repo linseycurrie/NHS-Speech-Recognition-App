@@ -20,10 +20,10 @@ const SpeechComponent = ({onSearch, searchResult, onReset}) => {
     return(
         <>
             <SearchBarComponent onSearch={onSearch} onClear={handleReset} transcript={transcript}/>
-            <button onClick={SpeechRecognition.startListening}>Start</button>
-            <button onClick={SpeechRecognition.stopListening}>Stop</button>
+            <button onClick={SpeechRecognition.startListening}>Start Recording</button>
+            {/* <button onClick={SpeechRecognition.stopListening}>Stop</button> */}
             <button onClick={handleReset}>Reset</button>
-            <br />
+            <br /><br />
         </>
     )
 }
