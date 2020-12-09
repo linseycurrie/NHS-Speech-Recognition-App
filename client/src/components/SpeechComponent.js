@@ -2,7 +2,9 @@ import React from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import SearchBarComponent from './SearchBarComponent';
 
-const SpeechComponent = ({onSearch}) => {
+const SpeechComponent = ({onSearch, searchResult, onReset}) => {
+
+
 
     const { transcript, resetTranscript } = useSpeechRecognition()
 
@@ -10,12 +12,17 @@ const SpeechComponent = ({onSearch}) => {
         return null
     }
     
+    const handleReset = function(){
+        resetTranscript()
+        return onReset()
+        }
+
     return(
         <>
-            <SearchBarComponent onSearch={onSearch} transcript={transcript}/>
+            <SearchBarComponent onSearch={onSearch} onClear={handleReset} transcript={transcript}/>
             <button onClick={SpeechRecognition.startListening}>Start</button>
             <button onClick={SpeechRecognition.stopListening}>Stop</button>
-            <button onClick={resetTranscript}>Reset</button>
+            <button onClick={handleReset}>Reset</button>
             <br />
         </>
     )

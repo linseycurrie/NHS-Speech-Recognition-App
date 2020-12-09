@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const SearchBarComponent = ({onSearch, transcript}) => {
+const SearchBarComponent = ({onSearch, transcript, }) => {
 
     const [searchTerm, setSearchTerm] = useState("")
 
@@ -18,7 +18,10 @@ const SearchBarComponent = ({onSearch, transcript}) => {
     const handleSubmit = function(event) {
         event.preventDefault();
         onSearch(searchTerm) ;
+        setSearchTerm("")
     }
+
+    
 
     return(
         <>
