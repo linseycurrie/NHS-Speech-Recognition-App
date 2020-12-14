@@ -14,7 +14,12 @@
 * Integrate additional APIs - e.g. NHS Services
 * Integrate Maps for displaying local GPs, Pharmacies etc.
 
+
+
 ![](images/Screenshot%202020-12-14%20at%2012.41.13.png)
+
+
+
 
 # Getting Started with Create React App
 
