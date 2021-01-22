@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "axios": "^0.21.1",
     "daypilot-pro-react": "https://npm.daypilot.org/daypilot-pro-react/trial/2020.4.4788.tar.gz",
     "google-map-react": "^2.1.9",
     "react": "^17.0.1",

@@ -1,12 +1,30 @@
+<<<<<<< HEAD
 import React, {Component} from 'react';
 
 // const ServicesComponent = () => {
+=======
+import React from 'react';
+import SearchBarComponent from '../components/SearchBarComponent';
 
+const ServicesComponent = ({onSearchPostCode}) => {
+>>>>>>> 5a27c4eac1a4097ddd70f6bfb06ac6158276f18a
 
+    const placeHolder = "e.g. SW1A 1AA"
+
+<<<<<<< HEAD
 //     return(
 //         <h3>Search for your local GP:</h3>
 //     )
 // }
+=======
+    return(
+        <>
+            <h3>Search for your local GP:</h3>
+            <SearchBarComponent placeHolder={placeHolder} onSearchPostCode={onSearchPostCode}/>
+        </>
+    )
+}
+>>>>>>> 5a27c4eac1a4097ddd70f6bfb06ac6158276f18a
 
 import GoogleMapReact from 'google-map-react';
  
