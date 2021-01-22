@@ -10,12 +10,13 @@ const ConditionsContainer = () => {
 
     const headerCopy = "Welcome to your NHS Health App";
     const headerBanner = "/nhs-staff-2.jpg";
+    const placeHolder = "e.g. flu";
 
     const [searchResult, setSearchResult] = useState(null);
 
     const handleSearchRequest = function(searchTerm) {
         const request = new Request();
-        request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-'))
+        request.get("https://api.nhs.uk/conditions/" + searchTerm.replace(/\s/g, '-').toLowerCase())
         .then((data) => {setSearchResult(data)})
     }
 
@@ -26,7 +27,7 @@ const ConditionsContainer = () => {
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
-            <SpeechComponent searchResult={searchResult} onReset={clearSearchResult} onSearch={handleSearchRequest} />
+            <SpeechComponent searchResult={searchResult} onReset={clearSearchResult} onSearchCondition={handleSearchRequest} />
             <InformationDetailComponent searchResult={searchResult} />
         </>
     )
