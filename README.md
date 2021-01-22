@@ -1,5 +1,7 @@
 # NHS Health App Brief
 
+Group project created in 7days using JavaScript, React, Spring, Java and a NHS Restful API with speech Recognition.
+
 ## CodeClan Dream Team - NHS Health App with Speech Recognition
 
 ### MVP
@@ -13,6 +15,12 @@
 * Add Speech Synthesis for reading out search results
 * Integrate additional APIs - e.g. NHS Services
 * Integrate Maps for displaying local GPs, Pharmacies etc.
+
+
+
+### Homepage: 
+![](images/Screenshot%202020-12-14%20at%2012.41.13.png)
+
 
 
 
