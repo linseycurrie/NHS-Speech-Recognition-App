@@ -1,7 +1,8 @@
 import React from 'react';
-import SearchBarComponent from '../components/SearchBarComponent';
+import SearchBarComponent from '../SearchBarComponent';
+import ServicesListComponent from './ServicesListComponent';
 
-const ServicesComponent = ({onSearchPostCode}) => {
+const ServicesComponent = ({onSearchPostCode, serviceSearchResult}) => {
 
     const placeHolder = "e.g. SW1A 1AA"
 
@@ -9,6 +10,7 @@ const ServicesComponent = ({onSearchPostCode}) => {
         <>
             <h3>Search for your local GP:</h3>
             <SearchBarComponent placeHolder={placeHolder} onSearchPostCode={onSearchPostCode}/>
+            <ServicesListComponent serviceSearchResult={serviceSearchResult}/>
         </>
     )
 }

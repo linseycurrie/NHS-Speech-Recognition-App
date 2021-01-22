@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ServicesComponent from '../components/ServicesComponent';
+import ServicesComponent from '../components/ServicesComponents/ServicesComponent';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent'
 import Request from '../helpers/request'
 import axios from 'axios';
@@ -31,14 +31,11 @@ const ServicesContainer = () => {
         
     }
 
-    // useEffect(() => {
-        
-    // }, [])
 
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
-            <ServicesComponent onSearchPostCode={handleSearchRequest}/>
+            <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult}/>
         </>
     )
 }
