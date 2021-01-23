@@ -4,7 +4,7 @@ import ServicesIndividualComponent from './ServicesIndividualComponent';
 const ServicesListComponent = ({serviceSearchResult}) => {
 
     if(!serviceSearchResult){
-        return <p>Loading ....</p>
+        return null
     } else if (serviceSearchResult.error) {
         return (
             "Sorry please enter valid postcode."
