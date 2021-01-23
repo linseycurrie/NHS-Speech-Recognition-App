@@ -9,8 +9,11 @@ const ServicesContainer = () => {
     const headerBanner = "/gp-surgery.jpg";
 
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
+    const [searchedPostcode, setSearchedPostcode] = useState("");
 
     const handleSearchRequest = function(searchTerm) {
+
+        setSearchedPostcode(searchTerm);
 
         let body = {
             "filter": "(OrganisationTypeID eq 'GPB')",
@@ -34,7 +37,7 @@ const ServicesContainer = () => {
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
-            <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult}/>
+            <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/>
         </>
     )
 }

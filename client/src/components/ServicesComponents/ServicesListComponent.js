@@ -1,7 +1,7 @@
 import React from 'react';
 import ServicesIndividualComponent from './ServicesIndividualComponent';
 
-const ServicesListComponent = ({serviceSearchResult}) => {
+const ServicesListComponent = ({serviceSearchResult, searchedPostcode}) => {
 
     if(!serviceSearchResult){
         return null
@@ -13,7 +13,7 @@ const ServicesListComponent = ({serviceSearchResult}) => {
         const serviceSearchResultNodes = serviceSearchResult.data.value.map((individualResult, index) => {
           return (
               <li key={index}>
-                  <ServicesIndividualComponent individualResult={individualResult} />
+                  <ServicesIndividualComponent individualResult={individualResult} searchedPostcode={searchedPostcode}/>
               </li>
           )  
         })
