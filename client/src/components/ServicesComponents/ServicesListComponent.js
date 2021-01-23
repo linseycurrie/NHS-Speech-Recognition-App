@@ -1,22 +1,28 @@
 import React from 'react';
+import ServicesIndividualComponent from './ServicesIndividualComponent';
 
 const ServicesListComponent = ({serviceSearchResult}) => {
 
     if(!serviceSearchResult){
         return <p>Loading ....</p>
-    } else if(serviceSearchResult.error) {
+    } else if (serviceSearchResult.error) {
         return (
             "Sorry please enter valid postcode."
         )
     } else {
-
-    return(
-        <>
-            <p>Services List</p>
-            
-        </>
-    )
-}
+        const serviceSearchResultNodes = serviceSearchResult.data.value.map((individualResult, index) => {
+          return (
+              <li key={index}>
+                  <ServicesIndividualComponent individualResult={individualResult} />
+              </li>
+          )  
+        })
+        return (
+            <ul>
+                {serviceSearchResultNodes}
+            </ul>
+        )
+    }
 }
 
 export default ServicesListComponent;

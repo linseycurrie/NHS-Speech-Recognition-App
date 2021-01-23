@@ -10,7 +10,7 @@ const ConditionsContainer = () => {
 
     const headerCopy = "Welcome to your NHS Health App";
     const headerBanner = "/nhs-staff-2.jpg";
-    const placeHolder = "e.g. flu";
+    
 
     const [searchResult, setSearchResult] = useState(null);
 
