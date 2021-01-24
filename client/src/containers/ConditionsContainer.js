@@ -10,6 +10,7 @@ const ConditionsContainer = () => {
 
     const headerCopy = "Welcome to your NHS Health App";
     const headerBanner = "/nhs-staff-2.jpg";
+    const placeHolder = "e.g. flu"
     
 
     const [searchResult, setSearchResult] = useState(null);
@@ -27,7 +28,8 @@ const ConditionsContainer = () => {
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
-            <SpeechComponent searchResult={searchResult} onReset={clearSearchResult} onSearchCondition={handleSearchRequest} />
+            <h2>Search a condition:</h2>
+            <SpeechComponent searchResult={searchResult} onReset={clearSearchResult} onSearchCondition={handleSearchRequest} placeHolder={placeHolder} />
             <InformationDetailComponent searchResult={searchResult} />
         </>
     )

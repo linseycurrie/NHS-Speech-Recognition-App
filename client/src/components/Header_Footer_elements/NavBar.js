@@ -1,7 +1,8 @@
 import React from 'react';
+import UserListComponent from '../UserComponents/UserListComponent';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({allUsers, onSelection}) => {
 
     return(
         <header>
@@ -10,7 +11,6 @@ const NavBar = () => {
             <li className="navLink">
                 <a href="/">Home</a>
             </li>
-
             <li className="navLink">
                 <a href="/services">Find Services</a>
             </li>
@@ -21,6 +21,7 @@ const NavBar = () => {
                 <a href="/user">User Details</a>
             </li>
         </ul>
+        <UserListComponent allUsers={allUsers} onSelection={onSelection}/>
         </header>
     )
 }

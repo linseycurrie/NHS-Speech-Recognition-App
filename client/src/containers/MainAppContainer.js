@@ -38,7 +38,7 @@ const MainAppContainer = () => {
     return(
         <Router>
         <>
-        <NavBar /> 
+        <NavBar  allUsers={allUsers} onSelection={handleDisplayUserDetail}/> 
         <section>
             <Switch>
                 <Route exact path="/" component={ConditionsContainer} />
