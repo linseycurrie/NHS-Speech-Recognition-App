@@ -10,13 +10,14 @@ import './MainAppContainer.css'
 import Request from '../helpers/request';
 
 const MainAppContainer = () => {
-    const [selectedUser, setSelectedUser] = useState(null);
+    const [selectedUser, setSelectedUser] = useState({});
     const [allUsers, setAllUsers] = useState([]);
 
     const requestAllUsers = function(){
         const request = new Request();
         request.get("api/users")
         .then((data) => {setAllUsers(data)})
+        console.log("reload homepage :)")
     }
 
     const handleDisplayUserDetail = function(id){
@@ -33,7 +34,7 @@ const MainAppContainer = () => {
 
     useEffect(() => {
         requestAllUsers()
-    }, [allUsers])
+    }, [])
 
     return(
         <Router>
@@ -45,7 +46,7 @@ const MainAppContainer = () => {
 
                 <Route exact path="/services" component={ServicesContainer} />
                 
-                <Route exact path="/user" render={params => <UserContainer onSelection={handleDisplayUserDetail} allUsers={allUsers} selectedUser={selectedUser} />} />
+                <Route exact path="/user" render={props => <UserContainer onSelection={handleDisplayUserDetail} allUsers={allUsers} selectedUser={selectedUser} />} />
 
                 <Route exact path='/reminders' component={ReminderContainer} />
         </Switch>

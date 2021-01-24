@@ -21,7 +21,7 @@ const NavBar = ({allUsers, onSelection}) => {
                 <a href="/user">User Details</a>
             </li>
         </ul>
-        <UserListComponent allUsers={allUsers} onSelection={onSelection}/>
+        <UserListComponent allUsers={allUsers} onSelection={onSelection} />
         </header>
     )
 }

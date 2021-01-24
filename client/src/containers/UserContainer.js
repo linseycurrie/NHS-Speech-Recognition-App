@@ -6,7 +6,7 @@ import Request from '../helpers/request'
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 import '../App.css';
 
-const UserContainer = ({onSelection, allUsers, selectedUser}) => {
+const UserContainer = ({allUsers, onSelection, selectedUser}) => {
 
     // const [allUsers, setAllUsers] = useState([]);
     // const [selectedUser, setSelectedUser] = useState(null);
@@ -16,6 +16,7 @@ const UserContainer = ({onSelection, allUsers, selectedUser}) => {
     //     const request = new Request();
     //     request.get("api/users")
     //     .then((data) => {setAllUsers(data)})
+        
     // }
 
     const headerCopy = "Your Personal Details";
@@ -40,9 +41,9 @@ const UserContainer = ({onSelection, allUsers, selectedUser}) => {
         .then(() => window.location = "/user")
     }
 
-    const handleUpdate = function(pirate){
+    const handleUpdate = function(user){
         const request = new Request();
-        request.patch("/api/users/" + pirate.id, pirate)
+        request.patch("/api/users/" + user.id, user)
         .then(() => window.location = "/user")
     }
 
