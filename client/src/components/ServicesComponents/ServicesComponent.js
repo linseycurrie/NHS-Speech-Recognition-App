@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBarComponent from '../SearchBarComponent';
+import SpeechComponent from '../SpeechComponent';
 import ServicesListComponent from './ServicesListComponent';
 
 const ServicesComponent = ({onSearchPostCode, serviceSearchResult, searchedPostcode}) => {

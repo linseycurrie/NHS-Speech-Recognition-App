@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import ServicesComponent from '../components/ServicesComponents/ServicesComponent';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent'
+import SpeechComponent from '../components/SpeechComponent';
+import ServicesListComponent from '../components/ServicesComponents/ServicesListComponent';
 import axios from 'axios';
 
 const ServicesContainer = () => {
 
     const headerCopy = "Find a Service"
     const headerBanner = "/gp-surgery.jpg";
+    const placeHolder = "e.g. SW1A 1AA"
 
     const [serviceSearchResult, setServiceSearchResult] = useState(null);
     const [searchedPostcode, setSearchedPostcode] = useState("");
@@ -37,7 +40,10 @@ const ServicesContainer = () => {
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
-            <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/>
+            {/* <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/> */}
+            <h3>Search for your local GP:</h3>
+            <SpeechComponent placeHolder={placeHolder} onSearchPostCode={handleSearchRequest}/>
+            <ServicesListComponent serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/>
         </>
     )
 }
