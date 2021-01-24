@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
+import CalendarComponent from '../components/ReminderComponents/CalendarComponent';
 import ReminderComponent from '../components/ReminderComponents/ReminderComponent';
 import Request from '../helpers/request'
 
@@ -18,6 +19,7 @@ const ReminderContainer = () => {
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner}/>
             <ReminderComponent onCreate={handlePost} />
+            <CalendarComponent />
         </>
     )
 }

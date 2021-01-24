@@ -6,18 +6,17 @@ import Request from '../helpers/request'
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent';
 import '../App.css';
 
-const UserContainer = () => {
+const UserContainer = ({onSelection, allUsers, selectedUser}) => {
 
-    const [allUsers, setAllUsers] = useState([]);
-    const [selectedUser, setSelectedUser] = useState(null);
+    // const [allUsers, setAllUsers] = useState([]);
+    // const [selectedUser, setSelectedUser] = useState(null);
    
 
-    const requestAllUsers = function(){
-        const request = new Request();
-        request.get("api/users")
-        .then((data) => {setAllUsers(data)})
-        
-    }
+    // const requestAllUsers = function(){
+    //     const request = new Request();
+    //     request.get("api/users")
+    //     .then((data) => {setAllUsers(data)})
+    // }
 
     const headerCopy = "Your Personal Details";
     const headerBanner = "/nhs.jpg";
@@ -28,11 +27,11 @@ const UserContainer = () => {
         .then(() => window.location = "/user")
     }
 
-    const findUserById = function(id){
-        return allUsers.find((user) => {
-            return user.id === parseInt(id);
-        })
-    }
+    // const findUserById = function(id){
+    //     return allUsers.find((user) => {
+    //         return user.id === parseInt(id);
+    //     })
+    // }
 
     const handleDelete = function(id){
         const request = new Request();
@@ -47,15 +46,15 @@ const UserContainer = () => {
         .then(() => window.location = "/user")
     }
 
-    const handleDisplayUserDetail = function(id){
-        console.log(id)
-        const user = findUserById(id)
-        setSelectedUser(user)
-    }
+    // const handleDisplayUserDetail = function(id){
+    //     console.log(id)
+    //     const user = findUserById(id)
+    //     setSelectedUser(user)
+    // }
     
-    useEffect(() => {
-        requestAllUsers()
-    }, [allUsers])
+    // useEffect(() => {
+    //     requestAllUsers()
+    // }, [allUsers])
 
 
     if(!allUsers){
@@ -67,7 +66,7 @@ const UserContainer = () => {
         <>
         <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
 
-        <UserListComponent allUsers={allUsers} onSelection={handleDisplayUserDetail} />
+        <UserListComponent allUsers={allUsers} onSelection={onSelection} />
 
         <UserDetailComponenet selectedUser={selectedUser}  onDelete={handleDelete}/>
       
