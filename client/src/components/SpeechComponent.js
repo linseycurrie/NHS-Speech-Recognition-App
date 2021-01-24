@@ -7,7 +7,6 @@ const SpeechComponent = ({onSearchCondition, onSearchPostCode, searchResult, onR
 
 
     const { transcript, resetTranscript } = useSpeechRecognition()
-    // const placeHolder = "e.g. flu"
 
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
         return null
