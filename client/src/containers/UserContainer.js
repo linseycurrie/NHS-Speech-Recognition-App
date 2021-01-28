@@ -11,12 +11,10 @@ const UserContainer = () => {
     const [allUsers, setAllUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
    
-
     const requestAllUsers = function(){
         const request = new Request();
         request.get("api/users")
         .then((data) => {setAllUsers(data)})
-        
     }
 
     const headerCopy = "Your Personal Details";
@@ -66,14 +64,10 @@ const UserContainer = () => {
 
         <>
         <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
-
         <UserListComponent allUsers={allUsers} onSelection={handleDisplayUserDetail} />
-
-        <UserDetailComponenet selectedUser={selectedUser}  onDelete={handleDelete}/>
-      
+        <UserDetailComponenet selectedUser={selectedUser}  onDelete={handleDelete}/>   
         <UserFormComponent onCreate={handlePost} onUpdate={handleUpdate} />
         </>
     )
-    
 }
 export default UserContainer;

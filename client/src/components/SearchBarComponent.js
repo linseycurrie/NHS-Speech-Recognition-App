@@ -25,12 +25,11 @@ const SearchBarComponent = ({onSearchCondition, onSearchPostCode, transcript, pl
         setSearchTerm("")
     }
 
-    
-
     return(
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder={placeHolder} value={searchTerm} onChange={handleTypedInput} required />
+                <label htmlFor="search-field">Search:</label>
+                <input type="text" id="search-field" placeholder={placeHolder} value={searchTerm} onChange={handleTypedInput} required />
                 <button type="submit">Search</button>
             </form>
         </>

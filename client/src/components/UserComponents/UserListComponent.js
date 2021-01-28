@@ -23,9 +23,9 @@ const UserListComponent = ({allUsers, onSelection}) => {
     })
     return(
         <>
-            <h3>Select a User:</h3>
-            <select onChange={handleSelection}>
-                <option selected disabled>Select User</option>
+            <label htmlFor="user-dropdown"><h2>Select a User:</h2></label>
+            <select id="user-dropdown" defaultValue="Select User" onChange={handleSelection}>
+                <option disabled>Select User</option>
                 {userNodes}
             </select>
         </>

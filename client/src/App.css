@@ -5,7 +5,7 @@
 input[type=text] {
   box-sizing: border-box;
   width: 250px;
-  height: 30px;
+  height: 38px;
   border-radius: 6px;
   padding-left: 10px;
   font-size: 16px;
@@ -26,14 +26,14 @@ input[type=submit] {
 
 button {
   background-color: rgb(52, 113, 151);
-  width: 150px;
+  width: 130px;
   color: white;
   box-sizing: border-box;
-  height: 30px;
+  height: 38px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Oxygen', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   padding: 0 20px;
   margin: 0 5px;
   cursor: pointer;

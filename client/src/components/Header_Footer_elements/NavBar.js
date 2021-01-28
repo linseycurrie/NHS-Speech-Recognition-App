@@ -11,13 +11,13 @@ const NavBar = () => {
                 <a href="/">Home</a>
             </li>
             <li className="navLink">
-                <a href="/user">User Page</a>
-            </li>
-            <li className="navLink">
-                <a href="/services">Find Services</a>
+                <a href="/services">Find a Service</a>
             </li>
             <li className="navLink">
                 <a href="/reminders">Reminders</a>
+            </li>
+            <li className="navLink">
+                <a href="/user">User Details</a>
             </li>
         </ul>
         </header>

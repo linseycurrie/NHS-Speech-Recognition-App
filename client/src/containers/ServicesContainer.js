@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ServicesComponent from '../components/ServicesComponents/ServicesComponent';
 import HeaderComponent from '../components/Header_Footer_elements/HeaderComponent'
 import SpeechComponent from '../components/SpeechComponent';
 import ServicesListComponent from '../components/ServicesComponents/ServicesListComponent';
@@ -32,16 +31,12 @@ const ServicesContainer = () => {
             }
         })
         .then((data) => {setServiceSearchResult(data)});
-
-        
     }
-
 
     return(
         <>
             <HeaderComponent headerCopy={headerCopy} headerBanner={headerBanner} />
-            {/* <ServicesComponent onSearchPostCode={handleSearchRequest} serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/> */}
-            <h3>Search for your local GP:</h3>
+            <h2>Search for your local GP:</h2>
             <SpeechComponent placeHolder={placeHolder} onSearchPostCode={handleSearchRequest}/>
             <ServicesListComponent serviceSearchResult={serviceSearchResult} searchedPostcode={searchedPostcode}/>
         </>

@@ -17,11 +17,8 @@ const MainAppContainer = () => {
         <section>
             <Switch>
                 <Route exact path="/" component={ConditionsContainer} />
-
                 <Route exact path="/services" component={ServicesContainer} />
-                
                 <Route exact path="/user" component={UserContainer} />
-
                 <Route exact path='/reminders' component={ReminderContainer} />
         </Switch>
         </section>

@@ -4,8 +4,6 @@ import SearchBarComponent from './SearchBarComponent';
 
 const SpeechComponent = ({onSearchCondition, onSearchPostCode, searchResult, onReset, placeHolder}) => {
 
-
-
     const { transcript, resetTranscript } = useSpeechRecognition()
 
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -19,9 +17,9 @@ const SpeechComponent = ({onSearchCondition, onSearchPostCode, searchResult, onR
 
     return(
         <>
-            <p>Please start <b>typing</b> your search term into the below field or<br />click <b>"Start Recording"</b> and speak your search term and then click <b>"Search"</b>.</p>
+            <p>Please start <b>typing</b> your search term into the below field or<br />click <b>"Record"</b> and speak your search term and then click <b>"Search"</b>.</p>
             <SearchBarComponent onSearchCondition={onSearchCondition} onSearchPostCode={onSearchPostCode} onClear={handleReset} transcript={transcript} placeHolder={placeHolder}/>
-            <button onClick={SpeechRecognition.startListening}>Start Recording</button>
+            <button onClick={SpeechRecognition.startListening}>Record</button>
             <button onClick={handleReset}>Reset</button>
             <br /><br />
         </>

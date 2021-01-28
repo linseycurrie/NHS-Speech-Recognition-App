@@ -12,7 +12,7 @@ const ServicesIndividualComponent = ({individualResult, searchedPostcode}) => {
         if (url === null) {
             return '';
         }
-        if (!/^http?:\/\//i.test(url)) {
+        else if (!/^http?:\/\//i.test(url)) {
             return url = 'http://' + url;
         } else {
             return url;

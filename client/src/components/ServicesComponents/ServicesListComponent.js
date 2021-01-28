@@ -7,7 +7,7 @@ const ServicesListComponent = ({serviceSearchResult, searchedPostcode}) => {
         return null
     } else if (serviceSearchResult.error) {
         return (
-            "Sorry please enter valid postcode."
+            "Please enter valid postcode."
         )
     } else {
         const serviceSearchResultNodes = serviceSearchResult.data.value.map((individualResult, index) => {
