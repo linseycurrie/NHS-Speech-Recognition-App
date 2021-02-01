@@ -18,3 +18,11 @@ li::marker {
     font-size: 24px;
     color: rgb(66, 66, 66);
 }
+
+@media (max-width: 767px) {
+
+    .info-panel {
+        width: 90%;
+        margin: auto;
+    }
+}

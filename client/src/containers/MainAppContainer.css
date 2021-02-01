@@ -3,3 +3,16 @@ section {
     top: 122px;
     padding-bottom: 170px;
 }
+
+@media (max-width: 767px) {
+
+    section {
+        top: 0px;
+    }
+
+    .services-list {
+        padding: 0;
+        max-width: 90%;
+        margin: auto;
+    }
+}

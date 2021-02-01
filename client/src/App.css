@@ -62,3 +62,10 @@ h2 {
 h3 {
   color: rgb(66, 66, 66);
 }
+
+@media (max-width: 767px) {
+
+  button {
+    margin-bottom: 15px;
+  }
+}

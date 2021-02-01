@@ -9,7 +9,6 @@
     font-weight: 300;
     text-align: right;
     margin-right: 25px;
-    
 }
 
 .form-userDetails > input {
@@ -22,4 +21,34 @@
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
     margin-right: 270px;
+  }
+
+  @media (max-width: 500px) {
+
+    .form-userDetails > label {
+        display: inline-block;
+        margin: auto;
+        text-align: left;
+    }
+
+    .form-userDetails > input {
+        flex-direction: column;
+        margin: auto;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 794px) {
+
+    .form-userDetails > label {
+        text-align: right;
+        margin-right: 25px;
+        justify-content: center;
+    }
+
+    .form-userDetails > input {
+        flex-direction: column;
+        margin: auto;
+        margin-right: 240px;
+    }
+
   }

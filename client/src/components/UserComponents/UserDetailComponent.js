@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const UserDetailComponent = ({selectedUser, onDelete}) => {
     
     const handleDelete = () => {

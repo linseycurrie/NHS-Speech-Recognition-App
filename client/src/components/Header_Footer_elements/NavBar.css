@@ -24,3 +24,25 @@ header > ul {
     padding-right: 25px;
     list-style-type: none;
 }
+
+@media (max-width: 767px) {
+
+    header {
+        position: relative;
+        flex-direction: column;
+    }
+    
+    header > img {
+        width: 200px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    header > ul {
+        flex-direction: column;
+    }
+
+    .navLink {
+        margin-top: 8px;
+    }
+}

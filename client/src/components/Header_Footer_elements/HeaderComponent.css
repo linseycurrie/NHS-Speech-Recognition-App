@@ -15,3 +15,13 @@ h1 {
     height: 250px;
     object-fit: cover;
 }
+
+@media (max-width: 767px) {
+    
+    h1 {
+        font-size: 35px;
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}

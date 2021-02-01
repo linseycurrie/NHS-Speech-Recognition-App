@@ -18,7 +18,7 @@ const ServicesListComponent = ({serviceSearchResult, searchedPostcode}) => {
           )  
         })
         return (
-            <ul>
+            <ul className="services-list">
                 {serviceSearchResultNodes}
             </ul>
         )
