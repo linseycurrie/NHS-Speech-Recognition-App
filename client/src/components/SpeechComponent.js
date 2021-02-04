@@ -8,7 +8,13 @@ const SpeechComponent = ({onSearchCondition, onSearchPostCode, searchResult, onR
     const { transcript, resetTranscript } = useSpeechRecognition()
 
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-        return null
+        return (
+            <>
+                <p>Please start typing your search term into the below field and then click <b>"Search"</b>.</p>
+                <SearchBarComponent onSearchCondition={onSearchCondition} onSearchPostCode={onSearchPostCode} placeHolder={placeHolder} />
+            
+            </>
+        )
     }
     
     const handleReset = function(){

@@ -16,7 +16,7 @@ h1 {
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     
     h1 {
         font-size: 35px;
@@ -24,4 +24,4 @@ h1 {
         margin: auto;
         margin-bottom: 15px;
     }
-}
+} */
